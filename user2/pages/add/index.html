@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>add USER</title>
+  <link rel="stylesheet" href="/style/add.css">
+</head>
+<body>
+    <div class="container">
+        <div class="description">
+            <h3> ОПЕРАТИВНАЯ СПРАВКА О ГРУЗОВОЙ РАБОТЕ</h3>
+            <h4> Ташкент РЖУ За </h4> 
+        </div>
+        <table>
+             <thead>
+                <!-- Birinchi qator -->
+            <tr>
+                <th rowspan="3">Stansiyalar</th>
+
+                <th colspan="11">Погрузка</th>
+
+                <th colspan="8">Под Погрузкой</th>
+
+                <th colspan="8">Выгрузка</th>
+                
+                <th colspan="8">Под Выгрузка </th>
+                
+                <th  rowspan="3">Ночной Выг</th>
+                <th  rowspan="3">Прибытие</th>
+                <th  rowspan="3">Отправление</th>
+                <th  rowspan="3">СНГ</th>
+               
+
+
+                
+
+            </tr>
+            <!-- Ikkinchi qator -->
+            <tr>
+                <th  colspan="3"> таннаж </th> 
+                <th rowspan="2"> все </th> <th rowspan="2"> снг </th> 
+                <th rowspan="2"> кр </th> <th rowspan="2"> пл </th> <th rowspan="2"> пв </th>
+                <th rowspan="2"> цс </th> <th rowspan="2"> цем </th> <th rowspan="2"> пр </th>
+                <th rowspan="2"> все </th> <th rowspan="2"> снг </th>  <th rowspan="2"> кр </th> <th rowspan="2"> пл </th> <th rowspan="2"> пв </th> 
+                <th  rowspan="2"> цс </th> <th rowspan="2"> цем </th> <th rowspan="2"> пр </th>
+                <th rowspan="2"> все </th> <th rowspan="2"> снг </th>  <th rowspan="2"> кр </th> <th rowspan="2"> пл </th> 
+                <th rowspan="2"> пв </th> <th rowspan="2"> цс </th> <th rowspan="2"> цем </th> 
+                <th rowspan="2"> пр </th><th rowspan="2"> все </th> <th rowspan="2"> снг </th>  <th rowspan="2"> кр </th> 
+                <th rowspan="2"> пл </th> <th rowspan="2"> пв </th> <th rowspan="2"> цс </th>
+                <th rowspan="2"> цем </th> <th rowspan="2"> пр </th>
+
+            </tr>
+            <!-- Uchinchi qator -->
+             <tr>
+                <th> обш </th> 
+                <th> чис </th>
+                <th> ось </th>
+             </tr>
+           
+            </thead>
+
+            <tbody>
+                <tr> 
+                    <td>Tuqimachi</td>  <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td>
+                    <td> <input type="number"> </td> <td> <input type="number"> <td> <input type="number"> </td> <td> <input type="number"> </td>
+                    <td> <input type="number"> </td> <td> <input type="number"> <td> <input type="number"> </td> <td> <input type="number"> </td>
+                    <td> <input type="number"> </td> <td> <input type="number"> <td> <input type="number"> </td> <td> <input type="number"> </td>
+                    <td> <input type="number"> </td> <td> <input type="number"> <td> <input type="number"> </td> 
+                   
+                   
+                </tr>
+            </tbody>
+        
+        </table>
+
+        <div class="description">
+            <h3> Заявка </h3>
+            <h4> Вагонов под погрузку и уборку по РЖУ Ташкент </h4> 
+        </div>
+
+        <table>
+            <thead>
+                <!-- Birinchi qator -->
+                <tr>
+                    <th rowspan="2"> Stansiya </th>
+                    <th colspan="8"> Zayavka</th>
+                    <th rowspan="2"> Uborka </th>
+
+                </tr>
+                <!-- Ikkinchi qator -->
+                 <tr>
+                    <th> кр </th> <th> пл </th> <th> пв </th>
+                    <th> цс </th> <th> зер </th> <th> цем </th>
+                    <th> фит </th> <th> пр </th> 
+                 </tr>
+
+            </thead>
+            <tbody>
+                <tr> 
+                    <td>Tuqimachi</td> 
+                    <td> <input type="number"> </td> <td> <input type="number"> <td> <input type="number"> </td> <td> <input type="number"> </td>
+                    <td> <input type="number"> </td> <td> <input type="number"> </td> <td> <input type="number"> </td>  <td> <input type="number"> </td>  
+                    <td> <textarea> </textarea> </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-sub">
+            <div class="sub-name">
+                <label for="name"><b>F.I.Sh. :</b></label>
+                <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+            </div>
+            <div class="search-data">
+                <label for="sana"><b>Date:</b> </label>
+                <input type="datetime-local" id="sana" name="sana" placeholder="sana"> 
+            </div>
+            <button type="submit"> <h3>Jo'natish </h3></button>
+        </div>
+    </div>
+
+</body>
+</html>

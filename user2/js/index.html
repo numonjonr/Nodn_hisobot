@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 20%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #2c2c3e;
+      padding-top: 20px;
+      
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 15px 25px;
+    }
+
+    .sidebar a:hover {
+      background-color: #44445a;
+    }
+
+    .main {
+      margin-left: 250px;
+      padding: 20px;
+      
+    }
+
+    .card {
+      border: none;
+      color: white;
+    }
+
+    .bg-primary {
+      background-color: #2962ff !important;
+    }
+
+    .bg-warning {
+      background-color: #ff6d00 !important;
+    }
+
+    .bg-success {
+      background-color: #2e7d32 !important;
+    }
+
+    .bg-danger {
+      background-color: #c62828 !important;
+    }
+
+     canvas {
+      
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section{
+      float: right;
+      width: 75%;
+      margin: 30px 10px 30px 40px;
+      padding: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <h4 class="text-center">STORE</h4>
+    <a href="#">Dashboard</a>
+    <a href="#">Products</a>
+    <a href="#">Categories</a>
+    <a href="#">Customers</a>
+    <a href="#">Inventory</a>
+    <a href="#"> Reports </a>
+    <a href="#">Settings</a>
+  </div>
+
+  <div class="main">
+    <h2>DASHBOARD</h2>
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="card bg-primary p-3">
+          <h3>Pogruzka</h3>
+          <h5 id="productsCount">0</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-warning p-3">
+          <h3>Pod Pogruzka</h3>
+          <h5 id="categoriesCount">0</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-success p-3">
+          <h3>Vigruzka</h3>
+          <h5 id="customersCount">0</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-danger p-3">
+          <h3>Pod Vigruzka</h3>
+          <h5 id="alertsCount">0</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Top 5 Products</h5>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <h5>Pogruzka va Vigruzka</h5>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("productsCount").innerText = localStorage.getItem("products") || "2132vag / 26354ton ";
+    document.getElementById("categoriesCount").innerText = localStorage.getItem("categories") || "3620 vag";
+    document.getElementById("customersCount").innerText = localStorage.getItem("customers") || "1212 vag";
+    document.getElementById("alertsCount").innerText = localStorage.getItem("alerts") || "2360 vag";
+
+    const barCtx = document.getElementById('barChart');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Laptop', 'Phone', 'Monitor', 'Headphones', 'Camera'],
+        datasets: [{
+          label: 'Count',
+          data: [9, 7, 5, 3, 2],
+          backgroundColor: ['blue', 'red', 'green', 'orange', 'purple']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    const lineCtx = document.getElementById('lineChart');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'Pogruzka',
+            data: [30, 40, 50, 35, 60, 90],
+            borderColor: 'green',
+            fill: false
+          },
+          {
+            label: 'Vigruzka',
+            data: [20, 60, 90, 50, 70, 100],
+            borderColor: 'red',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+
+  <div class="section">
+    <h2> Stansiyalar kesimida Pogruzka va Vigruzka umumiy grafik</h2>
+    <canvas id="barChartPGVG" width="900" height="500"></canvas>
+
+    <script>
+      const ctx = document.getElementById('barChartPGVG').getContext('2d');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [
+            "To'qimachi", "Xamza", "Toshkent", "Chuqursoy", "Angren", "Jaloyir", "Sergeli"
+          ],
+          datasets: [
+            {
+              label: 'Pogruzka',
+              data: [350, 300, 500, 350, 490, 420, 440],
+              backgroundColor: 'rgba(54, 162, 235, 0.7)',
+              stack: 'combined',
+              barThickness: 20
+            },
+            {
+              label: 'Vigruzka',
+              data: [400, 210, 210, 120, 420, 600, 470],
+              backgroundColor: 'rgba(255, 99, 132, 0.7)',
+              stack: 'combined',
+              barThickness: 20
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y', // Gorizontal bar chart
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: 'Stansiyalar bo‘yicha yuk miqdori'
+            },
+            legend: {
+              position: 'top'
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Yuk miqdori (tonnalarda)'
+              }
+            },
+            y: {
+              stacked: true
+            }
+          }
+        }
+      });
+</script>
+
+  </div>
+
+  
+
+</body>
+
+</html>
