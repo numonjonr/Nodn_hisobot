@@ -11,7 +11,7 @@
     body {
       background-color: #1e1e2f;
       color: white;
-      padding: 20px;
+      
     }
 
     .sidebar {
@@ -40,6 +40,32 @@
       margin-left: 250px;
       padding: 20px;
       
+    }
+
+    section{
+      position: sticky;
+      top: 0; /* Scroll qilinganda sarlavha joyida qoladi */
+      z-index: 1;
+      float: left;
+      width: 100%;
+      background-color: #050f32;
+      box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .section-logo a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 8px;
+        gap: 10px;
+        color: #eaab21;
+        font-size: 14px;
+        
+    }
+    .section-logo img{
+        
+        width: 60px;
     }
 
     .card {
@@ -86,6 +112,19 @@
     <a href="#"> Reports </a>
     <a href="#">Settings</a>
   </div>
+
+  <section>
+        <div class="main-section">
+            <div class="section-logo">
+                <a  href="/">
+                        <img src="./images/MTU_logo.png" alt="bu yerda logo">
+                        <p> <b>"TOSHKENT MINTAQAVIY TEMIR YO'L UZELI" filiali</b> <br>"Temir yo'l infratuzilma" AJ </p>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
 
   <div class="main">
     <h2>DASHBOARD</h2>

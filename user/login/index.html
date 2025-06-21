@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Sahifasi</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="shortcut icon" href="/user/assets/images/11.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Tizimga kirish</h2>
+      <input type="text" id="username" placeholder="Login" />
+
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Parol" />
+        <span class="toggle-password" onclick="togglePassword()">
+          <i class="fa-solid fa-eye"></i>
+        </span>
+      </div>
+
+      <button onclick="checkLogin()">Kirish</button>
+      <p id="error-msg"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

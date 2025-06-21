@@ -57,16 +57,16 @@ nav{
 
 
 .table-secttion{
-    margin: 50px 40px 10px 40px;
-    height: 490px;
-    width: 94%;
+    margin: 50px 40px 1px 100px;
+    height: 460px;
+    width: 80%;
     background: linear-gradient(145deg, #f1effb, #e2def2);
     position: relative;
     box-shadow:
       inset 2px 2px 6px #c3c1d7,
       inset -2px -2px 6px #ffffff,
       10px 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+   
 }
 .opti{
     display: flex;
@@ -123,7 +123,7 @@ button a{
 .table-wrapper {
     margin: 10px 80px;
       position: absolute;
-      max-height: 400px; /* vertikal scroll uchun */
+      max-height: 360px; /* vertikal scroll uchun */
       overflow-x: auto;  /* gorizontal scroll */
       overflow-y: auto;  /* vertikal scroll */
       border: 1px solid #999;
