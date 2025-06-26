@@ -22,8 +22,7 @@ body {
 section{
     position: sticky;
     top: 0; /* Scroll qilinganda sarlavha joyida qoladi */
-    z-index: 1;
-    float: left;
+    z-index: 10;
     width: 100%;
     background-color: #050f32;
     box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
@@ -41,23 +40,22 @@ section{
     font-size: 14px;
     
 }
-.section-logo img{
-    
+.section-logo img {
     width: 60px;
 }
 
 
 
-nav{
-    float: left;
-    height: 100vh;
+nav {
     background: radial-gradient(circle at top left, #d3cde7, #a3a1c8);
     width: 100%;
+    height: 100vh;
+    padding-top: 50px;
 }
 
 
 .table-secttion{
-    margin: 40px 40px 1px 110px;
+    margin: 0px 40px 1px 110px;
     height: 450px;
     width: 80%;
     background: linear-gradient(145deg, #f1effb, #e2def2);
@@ -187,11 +185,24 @@ table tbody tr:hover {
     color: rgb(152, 67, 67);
 }
 .footer-bottom {
-    
-    text-align: center;
-    padding: 4px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     font-size: 12px;
     background-color: #151515;
     color: #bbb;
+    z-index: 10;
     
+}
+.footer-bottom img{
+    width: 20px;
+    border-radius: 7px;
+}
+.footer-bottom a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
 }

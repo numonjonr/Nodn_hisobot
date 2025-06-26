@@ -1,0 +1,471 @@
+/* ====== Google fonts =======  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+
+}
+
+/* ========== Navigation ========= */
+.navigation {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active {
+    width: 80px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.personal-image{
+    position: relative;
+    list-style: none;
+    display: flex;
+    width: 80%;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1px 3px;
+    margin: 10px 5px 50px 15px;
+    gap: 15px;
+    
+}
+.p-image img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 1px;
+    cursor: pointer;
+    background-color: aliceblue;
+
+}
+.p-name a{
+    color: #eaab21;
+    text-decoration: none;
+    font-size: 7px;
+    
+    
+}
+
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--blue);
+}
+span img {
+    width: 45px;
+   padding-top: 10px;
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+
+}
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0px 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+
+       /* curve outside */
+
+.navigation ul li:hover  a::before,
+.navigation ul li.hovered  a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+.navigation ul li:hover  a::after,
+.navigation ul li.hovered  a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+
+/* ============ Main ========== */
+.main {
+    position: absolute;
+    width: calc(100% - 240px);
+    left: 240px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topbar {
+    position: sticky; /* yoki fixed */
+    top: 0;
+    z-index: 1000; /* boshqa elementlar ustida ko‘rinishi uchun */
+    background-color: white; /* orqa fon ko‘rinib turishi uchun */
+    
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    top: 0;
+    z-index: 1002;
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label {
+    position: relative;
+    width: 100%;
+}
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--blue);
+}
+.search label ion-icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+
+}
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    
+}
+.user img {
+    width: 43px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--gray);
+}
+
+
+nav {
+    position: relative;
+    background-color: var(--white);
+    width: 100%;
+    padding: 30px;
+    height: 90vh;
+}
+
+
+.table-secttion{
+    position: relative;
+    margin: 0px 40px 1px 50px;
+    height: 460px;
+    width: 90%;
+    background-color: #efeffa;
+    position: relative;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+   
+}
+.opti{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: end;
+    margin-left: 25px;
+   
+}
+.table-descrip{
+    padding: 10px;
+    text-align: center;
+    
+}
+
+ button {
+    display: block;
+    width: fit-content;
+    padding: 5px 35px;
+    background: linear-gradient(145deg, #5e4eff, #3f3abf);
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(63, 58, 191, 0.3);
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+button:hover {
+transform: scale(1.05);
+box-shadow: 0 7px 14px rgba(63, 58, 191, 0.4);
+}
+
+button a{
+    color: #dfdede;
+}
+
+.search-data input{
+    background: linear-gradient(to bottom right, #f3f1f9, #e7e4f3);
+    border: none;
+    border-radius: 12px;
+    padding: 6px;
+    font-size: 15px;
+    box-shadow: inset 3px 3px 5px 3px #c6c4da, inset -2px -2px 5px #ffffff;
+    transition: 0.3s ease;
+    outline: none;
+    resize: none;
+    cursor: pointer;
+}
+.search-data input:focus {
+    box-shadow: inset 1px 1px 4px #bdbbcc, inset -1px -1px 4px #ffffff;
+}
+
+.table-wrapper {
+    margin: 10px 20px 10px 40px;
+    position: absolute;
+    max-height: 360px; /* vertikal scroll uchun */
+    overflow-y: auto;  /* vertikal scroll */
+    border: 1px solid #999;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+    width: 92%; 
+}
+
+table {
+    width: 100%;  
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: center;
+    
+}
+td i {
+    text-align: center;
+    padding-right: 20px;
+}
+th{
+    background-color: #dfdede;
+    height: 30px;
+      position: sticky;
+      top: 0; /* Scroll qilinganda sarlavha joyida qoladi */
+      z-index: 1;
+}
+a{
+    text-decoration: none;
+}
+
+td i{
+    padding-left: 25px;
+    cursor: pointer;
+}
+table thead tr {
+  background-color: rgb(248, 248, 248);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgb(248, 248, 248);
+}
+
+table tbody tr:hover {
+  background-color: rgb(239, 239, 239);
+}
+#x-icon{
+    color: red;
+}
+#right-icon{
+    color: green;
+}
+#doc-icon{
+    color: #0000ee;
+}
+#delete{
+    color: rgb(152, 67, 67);
+}
+
+
+/* =============== Foooter ============== */
+
+.footer-bottom {
+    width: 100%;
+    height: 30px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    background-color: #050f32;
+    color: #bbb;
+    
+}
+.footer-bottom a img{
+    width: 20px;
+    border-radius: 7px;
+    
+}
+.footer-bottom a {
+    display:inline-flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+}
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+
+/* =========== Responsive desing =========== */
+@media (max-width:991px) {
+    .navigation {
+        left:-240px;
+    }
+    .navigation.active{
+        width: 240px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 240px;
+    }
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .chartsBx, .chartsBx1 {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+@media (max-width:480px){
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .user {
+        min-width: 40px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+    .toggle {
+        z-index: 1001;
+    }
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        right: 0;
+        left: initial;
+    }
+}

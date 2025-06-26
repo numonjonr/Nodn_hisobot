@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umumiy forma Menyu Admin</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+        <!-- ======== Navigation ========= -->
+
+    <div class="container">
+        <div class="navigation">
+            
+            <ul>
+
+                <div class="personal-image">
+                    <div class="p-image">
+                        <img src="./images/MTU_logo.png" alt="rasm">
+                    </div>
+                    <div class="p-name">
+                        <a href="/admin/"> <p><b>"TOSHKENT MINTAQAVIY TEMIR <br> YO'L UZELI" filiali</b> <br> "Temir yo'l infratuzilma" AJ</p> </a>
+                    </div>
+                </div>
+
+                <li>
+                    <a href="/admin/">
+                        <span class="icon">  <ion-icon name="stats-chart-outline"></ion-icon> </span>
+                        <span class="title"> Dashboard </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/hisobot/">
+                        <span class="icon"> <ion-icon name="newspaper-outline"></ion-icon> </span>
+                        <span class="title"> Hisobot </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="people-outline"></ion-icon> </span>
+                        <span class="title"> Foydalanuvchilar </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="chatbubbles-outline"></ion-icon> </span>
+                        <span class="title"> Xabarlar </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="help-outline"></ion-icon> </span>
+                        <span class="title"> Yordam </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="settings-outline"></ion-icon> </span>
+                        <span class="title"> Settings </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="log-out-outline"></ion-icon> </span>
+                        <span class="title"> Chiqish </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+        <!-- ========== Main ========== -->
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Qidirish">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+
+            <div class="user"> 
+                <img src="./images/admin.png" alt="admin">
+                <span class="admin">Admin</span>
+            </div>
+
+        </div>
+
+        <nav>
+            
+            <div class="table-secttion">
+                <div class="opti">
+                    <div class="table-descrip">
+                        <h3>  Ташкент РЖУ </h3>
+                        <h4>ОПЕРАТИВНАЯ СПРАВКА О ГРУЗОВОЙ РАБОТЕ </h4>
+                    </div>
+
+                </div>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr> 
+                                <th>Tasdiqligi</th> <th>Miqdori</th> <th> Sana </th> <th>Oy</th> <th>Yil</th> <th> Smena </th> 
+                                <th> Pogruzka(vag/ton) </th> <th> Vigruzka(vag) </th> <th> <i id="doc-icon" class="fa-regular fa-file"></i></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td> 3/57</td> <td>23</td> <td>May</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 23498 </td> <td> 2300 </td> <td> <a href="/admin/hisobot/pages/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon"  class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 12334 </td> <td> 2300 </td> <td> <a href="/admin/hisobot/pages/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 32849 </td> <td> 2300 </td> <td> <a href="/admin/pages/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon" class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 12343 </td> <td> 2300 </td> <td> <a href="/page/Do-2_Obshiy_forma/view/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon" class=" fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 23411 </td> <td> 2300 </td> <td> <a href="/page/Do-2_Obshiy_forma/view/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon" class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 12343 </td> <td> 2300 </td> <td> <a href="/page/Do-2_Obshiy_forma/view/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="right-icon" class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Den </td> <td> 2100 / 24312 </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon"  class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="right-icon" class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon"  class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon"  class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="right-icon"  class="fa-regular fa-square-check"></i> </td> <td>57/57</td> <td>13</td> <td>Aprel</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="x-icon" class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="x-icon" class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i  id="x-icon" class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Den </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                            <tr>
+                                <td> <i id="x-icon"  class="fa-regular fa-rectangle-xmark"></i> </td> <td>40/57</td> <td>30</td> <td>Mart</td> 
+                                <td>2025</td> <td> Noch </td> <td> 1100 / 24312  </td> <td> 2300 </td> <td> <a href="./Do-2_Obshiy_forma/"> <i class="fa-solid fa-file"></i> </a> </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            
+            
+        </nav>
+
+         <!-- ============= footer section ============= -->
+
+        <div class="footer-bottom">
+            <p> <i class="fa-solid fa-landmark"></i> Sayt Linkini har kimga uzatish man etiladi.© 13.06.2025 Directed by:    </p>
+            <a href="https://www.instagram.com/abduvakhobov_nr?igsh=NWNzN3k3YmpoMm5y"> Abduvahobov N.R. <img src="./images/logo.jpg"> </a>
+        </div>
+
+
+
+    </div>
+
+
+
+    
+
+
+   
+
+    <!-- ============== Script ============== -->
+
+    <script src="/admin/script/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- ======== iconicons ======== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
+
+  
+  
+  
+
+
+
+
+
+    
+
+    
+
