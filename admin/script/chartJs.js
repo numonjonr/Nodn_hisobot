@@ -4,31 +4,47 @@
     document.getElementById("podvigruzka").innerText = localStorage.getItem("podvigruzka") || "2360";
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  const ctx1 = document.getElementById('chart-1').getContext('2d');
-  const myChart = new Chart(ctx1, {
-      type: 'polarArea',
-      data: {
-          labels: ['kritiy', 'platforma', 'poluvagon', 'sisterna', 'sementavoz', 'Prochiy' ],
-          datasets: [{
-              label: 'Oylar',
-              data: [60, 80, 100, 120, 90, 70],
-              backgroundColor: [
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)',
+// window.addEventListener('DOMContentLoaded', () => {
+//   const ctx1 = document.getElementById('chart-1').getContext('2d');
+//   const myChart = new Chart(ctx1, {
+//       type: 'polarArea',
+//       data: {
+//           labels: ['kritiy', 'platforma', 'poluvagon', 'sisterna', 'sementavoz', 'Prochiy' ],
+//           datasets: [{
+//               label: 'Oylar',
+//               data: [60, 80, 100, 120, 90, 70],
+//               backgroundColor: [
+//                   'rgba(54, 162, 235, 1)',
+//                   'rgba(255, 99, 132, 1)',
+//                   'rgba(255, 206, 86, 1)',
+//                   'rgba(75, 192, 192, 1)',
+//                   'rgba(153, 102, 255, 1)',
+//                   'rgba(255, 159, 64, 1)',
 
 
-              ],
-          }],
-      },
-      options: {
-          responsive: true
-      }
-  });
+//               ],
+//           }],
+//       },
+//       options: {
+//           responsive: true
+//       }
+//   });
+// });
+
+new Chart(document.getElementById("chart-1"), {
+  type: "pie",
+  data: {
+    labels: ["Kritiy", "Poluvagon", "Platforma", "Sisterna", "prochiy"],
+    datasets: [{
+      data: [47.8, 26.1, 13.6, 8.7, 3.8],
+      backgroundColor: ["#00b894", "#0984e3", "#d63031", "#6c5ce7", "#fdcb6e"]
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { position: "bottom" }
+    }
+  }
 });
 
 
