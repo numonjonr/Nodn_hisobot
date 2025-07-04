@@ -21,9 +21,12 @@ body {
 
 .description {
     text-align: center;
-    margin: 80px 80px 40px 80px;
-    padding: 30px;
-
+    margin: 90px 0px 60px 90px;
+    display: flex;
+    gap: 200px;
+}
+a ion-icon {
+    font-size: 40px;
 }
 
 table {
@@ -88,6 +91,7 @@ td:nth-child(22) {
 td:nth-child(30) {
     background-color: rgb(179, 203, 143);
 }
+
  
 .vertikal{
     writing-mode: vertical-rl; transform: rotate(180deg);
@@ -101,18 +105,19 @@ td:nth-child(30) {
    margin: 30px 80px 80px 60px
 }
 
-.search-data input{
+.search-data input,
+.search-data select {
     background: linear-gradient(to bottom right, #f3f1f9, #e7e4f3);
     border: none;
     border-radius: 12px;
-    padding: 4px 12px;
+    padding: 4px 8px;
     font-size: 15px;
     box-shadow: inset 3px 3px 5px 3px #c6c4da, inset -2px -2px 5px #ffffff;
     transition: 0.3s ease;
     outline: none;
     resize: none;
     cursor: pointer;
-    width: 160px;
+    
 }
 .search-data input:focus {
     box-shadow: inset 1px 1px 4px #bdbbcc, inset -1px -1px 4px #ffffff;
@@ -129,6 +134,7 @@ td:nth-child(30) {
     outline: none;
     resize: none;
     width: 130px;
+    
   }
 
   td input{

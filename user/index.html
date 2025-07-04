@@ -10,46 +10,113 @@
       href="./images/MTU_logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css"
-        integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
         integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+    <!-- ======== Navigation ========= -->
 
-    <section>
-        <div class="main-section">
-            <div class="section-logo">
-                <a  href="/">
-                    <img src="./images/MTU_logo.png" alt="bu yerda logo">
-                    <p> <b>"TOSHKENT MINTAQAVIY TEMIR YO'L UZELI" filiali</b> <br>"Temir yo'l infratuzilma" AJ </p>
-                </a>
+    <div class="container">
+        <div class="navigation">
+            
+            <ul>
 
+                <div class="personal-image">
+                    <div class="p-image">
+                        <img src="./images/MTU_logo.png" alt="rasm">
+                    </div>
+                    <div class="p-name">
+                        <a href="/user/"> <p><b>"TOSHKENT MINTAQAVIY TEMIR <br> YO'L UZELI" filiali</b> <br> "Temir yo'l infratuzilma" AJ</p> </a>
+                    </div>
+                </div>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">  <ion-icon name="stats-chart-outline"></ion-icon> </span>
+                        <span class="title"> Dashboard </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/user/">
+                        <span class="icon"> <ion-icon name="newspaper-outline"></ion-icon> </span>
+                        <span class="title"> Hisobot </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="chatbubbles-outline"></ion-icon> </span>
+                        <span class="title"> Xabarlar </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="help-outline"></ion-icon> </span>
+                        <span class="title"> Yordam </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="settings-outline"></ion-icon> </span>
+                        <span class="title"> Settings </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/">
+                        <span class="icon"> <ion-icon name="log-out-outline"></ion-icon> </span>
+                        <span class="title"> Chiqish </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+        <!-- ========== Main ========== -->
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
             </div>
+
+            <div class="search">
+                <div>
+                    <input type="date" > dan
+                </div>
+                <div>
+                    <input type="date" > gacha
+                </div>
+                <button> <ion-icon name="sync-outline"></ion-icon> yangilash </button>
+            </div>
+
+            <div class="user"> 
+                <img src="./images/admin.png" alt="admin">
+                <span class="admin">User</span>
+            </div>
+
         </div>
 
-    </section>
-
-    <nav>
-
-        <div class="container">
+        <nav> 
+            <h2 class="name-station">ST TUQIMACHI</h2>
+            
             <div class="table-secttion">
+
                 <div class="opti">
                     <button> <a href="/user/pages/add/"> <i class="fa-solid fa-plus"></i> </a> </button>
                     <div class="table-descrip">
-                        <h3>ST TUQIMACHI</h3>
                         <h4> ОПЕРАТИВНАЯ СПРАВКА О ГРУЗОВОЙ РАБОТЕ </h4>
                     </div>
-
                 </div>
                 
                 <div class="table-wrapper">
@@ -114,26 +181,30 @@
                                
                             </tbody>
                         </table>
+                </div>
             </div>
 
+        </nav>
+
+        <div class="footer-bottom">
+            <p> <i class="fa-solid fa-landmark"></i> Sayt Linkini har kimga uzatish man etiladi. ©13.06.2025 Directed by:    </p>
+            <a href="https://www.instagram.com/abduvakhobov_nr?igsh=NWNzN3k3YmpoMm5y"> No'monjon A.R. <img src="/admin/images/logo.jpg"> </a>
         </div>
-        
-    </nav>
 
-    <div class="cleafix"></div>
-
-    <div class="footer-bottom">
-      <p> <i class="fa-solid fa-landmark"></i> Sayt Linkini har kimga uzatish man etiladi.©13.06.2025 Directed by:    </p>
-      <a href="https://www.instagram.com/abduvakhobov_nr?igsh=NWNzN3k3YmpoMm5y"> Abduvahobov N.R. <img src="/admin/images/logo.jpg"> </a>
     </div>
 
+
+    <!-- ============== Script ============== -->
+
+    <script src="/admin/script/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- ======== iconicons ======== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   
 
-
-    
-
-    
-
-    
 </body>
 </html>

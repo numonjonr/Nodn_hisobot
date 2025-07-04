@@ -21,27 +21,60 @@ body {
 
 .description {
     text-align: center;
-    margin: 90px 0px 60px 0px;
+    margin: 90px 0px 60px 90px;
+    display: flex;
+    gap: 200px;
+}
+a ion-icon {
+    font-size: 40px;
+}
+
+
+tbody{
+    margin-top: 80px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 1px 0px 1px 5px;
+    font-size: 15px;
+    
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
+  width: 100%;
+  border-radius: 12px;
+  border-collapse: collapse;
+  margin-bottom: 80px;
+}
+
+table td,
+table th {
+  border: 1px solid #ccc;
+  height: 40px;
+  padding: 0px 1px;
+  text-align: center;
+  font-size: 15px;
 }
 
 
-
-th, td {
-    border: 1px solid #333;
-    padding: 5px;
-    text-align: center;
-    font-size: 15px;
-}
 td{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
 }
+
+table thead tr {
+  background-color: rgb(245, 241, 241);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+table tbody tr:hover {
+  background-color: white;
+}
+
 td:nth-child(2) {
     background-color: rgb(225, 225, 176);
 }
@@ -70,22 +103,11 @@ td:nth-child(22) {
 td:nth-child(30) {
     background-color: rgb(179, 203, 143);
 }
- 
+
 .vertikal{
     writing-mode: vertical-rl; transform: rotate(180deg);
 }
-
-tbody{
-    margin-top: 80px;
-}
-td input{
-    width: 40px;
-    height: 30px;
-    padding: 1px 0px 1px 5px;
-    font-size: 15px;
-    
-}
-
+ 
 .section-sub {
    display: flex;
    justify-content: space-between;
@@ -153,11 +175,12 @@ button:hover {
     outline: none;
     resize: none;
   }
-  .search-data input{
+  .search-data input,
+  .search-data select {
     background: linear-gradient(to bottom right, #f3f1f9, #e7e4f3);
     border: none;
     border-radius: 12px;
-    padding: 10px;
+    padding: 8px;
     font-size: 15px;
     box-shadow: inset 3px 3px 5px 3px #c6c4da, inset -2px -2px 5px #ffffff;
     transition: 0.3s ease;
@@ -166,9 +189,33 @@ button:hover {
     cursor: pointer;}
 
 .form-input:focus{
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(57, 56, 56);
 }
 
 textarea{
     width: 100%;
+}
+
+.form-input {
+  padding: 1px 2px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  width: 98%;
+  
+  
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  background-color: rgb(228, 238, 220);
+}
+
+.form-textarea {
+  padding: 1px 2px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  width: 98%;
+  min-height: 31.5px;
 }

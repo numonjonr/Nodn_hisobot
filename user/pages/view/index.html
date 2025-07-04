@@ -9,12 +9,20 @@
       href="/user/images/MTU_logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
 </head>
 <body>
     <div class="container">
         <div class="description">
-            <h3> ОПЕРАТИВНАЯ СПРАВКА О ГРУЗОВОЙ РАБОТЕ</h3>
-            <h4> Ташкент РЖУ За </h4> 
+            <a href="/user/"> <ion-icon name="arrow-back-circle-outline"></ion-icon> </a> 
+            <div class="title">
+                <h3> ОПЕРАТИВНАЯ СПРАВКА О ГРУЗОВОЙ РАБОТЕ</h3>
+                <h4> Ташкент РЖУ За </h4> 
+            </div>
+            
         </div>
         <table>
              <thead>
@@ -118,11 +126,20 @@
             </div>
             <div class="search-data">
                 <label for="sana"><b>Date:</b> </label>
-                <input type="datetime-local" id="sana" name="sana" placeholder="sana"> 
+                <input type="date" id="sana" name="sana" placeholder="sana"> 
+                <select>
+                    <option>den</option>
+                    <option>noch</option>
+                </select>
             </div>
             
         </div>
     </div>
+
+    <!-- ======== iconicons ======== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
